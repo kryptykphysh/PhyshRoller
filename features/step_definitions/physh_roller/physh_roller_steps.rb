@@ -17,3 +17,16 @@ end
 Then /^the roll modifier should be "(.*?)"$/ do |roll_modifier|
   @dice_roll.roll_modifier.should == roll_modifier.to_i
 end
+
+Given /^I want to roll a die with "(.*?)" sides$/ do |sides_on_die|
+  @die = PhyshRoller::Die.new(sides_on_die)
+end
+
+When /^I roll the die$/ do
+  @die.roll
+end
+
+Then /^the result should be between "(.*?)" and "(.*?)"$/ do |lower_limit, upper_limit|
+  @die.last_result.should be >= lower_limit.to_i
+  @die.last_result.should be <= upper_limit.to_i
+end
