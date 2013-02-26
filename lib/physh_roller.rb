@@ -1,0 +1,1 @@
+require 'physh_roller/dice_roll'

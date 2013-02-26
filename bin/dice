@@ -1,3 +1,9 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'physh_roller'
+
+dice_roll_string = ARGV.shift
+
+PhyshRoller::DiceRoll.new(dice_roll_string)
