@@ -1,9 +1,23 @@
+class Output
+	def messages
+		@messages = []
+	end
+
+	def puts(message)
+		messages << message
+	end
+end
+
+def output
+	@output ||= Output.new
+end
+
 Given /^I want to roll some dice$/ do
   
 end
 
 When /^I create a new dice roll with the string "(.*?)"$/ do |dice_roll_string|
-  @dice_roll = PhyshRoller::DiceRoll.new(dice_roll_string)
+  @dice_roll = PhyshRoller::DiceRoll.new(dice_roll_string, output)
 end
 
 Then /^the number of dice should be "(.*?)"$/ do |number_of_dice|

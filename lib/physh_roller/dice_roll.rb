@@ -4,7 +4,7 @@ module PhyshRoller
 
 		attr_reader :dice_roll_string, :number_of_dice, :sides_on_dice, :roll_modifier
 		
-		def initialize( dice_roll_string )
+		def initialize(dice_roll_string, output)
 			@dice_roll_string = dice_roll_string.downcase
 			if valid_dice_roll_string?
 				set_default_values

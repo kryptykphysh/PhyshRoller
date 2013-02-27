@@ -3,9 +3,11 @@ require 'spec_helper'
 
 module PhyshRoller
 	describe DiceRoll do
+		before(:each) { @output = double('output') }
+		
 		describe "attributes and method tests" do
 			context "with a valid dice_roll_string" do
-				subject { DiceRoll.new("4d6-1") }
+				subject { DiceRoll.new("4d6-1", @output) }
 
 				it { should respond_to(:dice_roll_string) }
 				it { should respond_to(:number_of_dice) }
@@ -20,7 +22,7 @@ module PhyshRoller
 
 		describe "#new" do
 			subject do
-			  DiceRoll.new(passed_dice_roll_string)
+			  DiceRoll.new(passed_dice_roll_string, @output)
 		  end
 
 			context "passed '3d6-1' as dice roll string" do
@@ -42,13 +44,13 @@ module PhyshRoller
 
 		describe "#valid_dice_roll_string?" do
 			context "with a valid dice_roll_string" do
-				subject { DiceRoll.new("12d20-10") }
+				subject { DiceRoll.new("12d20-10", @output) }
 
 				its(:valid_dice_roll_string?)	{ should be_true }
 			end
 
 			context "with an invalid dice_roll_string" do
-				expect { DiceRoll.new("this_is_not_a_valid_dice_roll_string") }.to raise_exception
+				expect { DiceRoll.new("this_is_not_a_valid_dice_roll_string", @output) }.to raise_exception
 			end
 		end
 	end
