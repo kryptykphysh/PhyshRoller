@@ -3,7 +3,21 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 
 require 'physh_roller'
+require 'optparse'
 
-dice_roll_string = ARGV.shift
+options = {}
 
-PhyshRoller::DiceRoll.new(dice_roll_string)
+opt_parse = OptionParser.new do |opts|
+	# Banner to display at the top of the
+	# help screen.
+	opts.banner = "Usage: dice [options] dice_roll_string"
+
+	# Help screen option.
+	opts.on('-h', '--help', 'Display this screen') do
+		puts opts
+		exit
+	end
+end
+
+opt_parse.parse!
+

@@ -1,0 +1,14 @@
+Thu, 07 Mar 2013 21:59:02 +1100
+./doc/created.rid	Thu, 07 Mar 2013 21:59:02 +1100
+./lib/physh_roller.rb	Thu, 07 Mar 2013 20:21:07 +1100
+./lib/physh_roller/dice_roll.rb	Thu, 07 Mar 2013 21:10:57 +1100
+./lib/physh_roller/die.rb	Tue, 26 Feb 2013 16:25:06 +1100
+./spec/spec_helper.rb	Tue, 26 Feb 2013 13:25:35 +1100
+./spec/physh_roller/dice_roll_spec.rb	Thu, 07 Mar 2013 21:17:58 +1100
+./spec/physh_roller/die_spec.rb	Tue, 26 Feb 2013 17:24:30 +1100
+./bin/dice	Thu, 07 Mar 2013 21:49:46 +1100
+./features/step_definitions/physh_roller/physh_roller_steps.rb	Thu, 07 Mar 2013 21:19:53 +1100
+./features/support/env.rb	Tue, 26 Feb 2013 17:26:09 +1100
+./features/physh_roller/roll_dice.feature	Wed, 06 Mar 2013 11:12:19 +1100
+./features/physh_roller/roll_die.feature	Tue, 26 Feb 2013 17:30:35 +1100
+./features/physh_roller/parse_dice_roll_string.feature	Mon, 25 Feb 2013 23:31:18 +1100
