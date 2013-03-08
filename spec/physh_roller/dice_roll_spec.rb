@@ -120,5 +120,26 @@ module PhyshRoller
 				its([:sum])							{ should be <= 2042 }
 			end
 		end
+
+		describe "#output_results" do
+			before(:each) do
+				@dice_roll = DiceRoll.new("24d3-23", @output)
+				@dice_roll.roll_dice
+			end
+
+			after(:each) { @dice_roll.output_results }
+
+			it "should output the dice roll string" do
+				@output.should_receive(:puts).with('You rolled: 24d3-23')
+			end
+
+			it "should output the dice rolls" do
+				@output.should_receive(:puts).with(/\ADice rolls: (\d,)+\d\z/)
+			end
+
+			it "should output the total" do
+				@output.should_receive(:puts).with(/\ATotal: \d+\z/)
+			end
+		end
 	end
 end

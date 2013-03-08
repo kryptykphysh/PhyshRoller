@@ -11,6 +11,7 @@ opt_parse = OptionParser.new do |opts|
 	# Banner to display at the top of the
 	# help screen.
 	opts.banner = "Usage: dice [options] dice_roll_string"
+	opts.banner = "dice_roll_string examples: 1d6, 2d4-1, 99D100+1"
 
 	# Help screen option.
 	opts.on('-h', '--help', 'Display this screen') do
@@ -21,3 +22,21 @@ end
 
 opt_parse.parse!
 
+
+dice_roll_string = ARGV.unshift[0]
+
+dice_roll = PhyshRoller::DiceRoll.new(dice_roll_string, $stdout)
+dice_roll.roll_dice
+dice_roll.output_results
+
+while true
+	puts "Reroll? (Y/N)"
+	input = STDIN.gets.chomp.downcase
+	if input == 'y'
+		dice_roll.roll_dice
+		dice_roll.output_results
+	else
+		puts 'Fine then, be like that.'
+		exit
+	end
+end

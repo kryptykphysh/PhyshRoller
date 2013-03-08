@@ -5,7 +5,7 @@ module PhyshRoller
 		attr_reader :dice_roll_string, :sides_on_dice, :roll_modifier,
 			:dice_array
 		
-		def initialize(dice_roll_string, output)
+		def initialize(dice_roll_string, output=$stdout)
 			@output = output
 			@dice_roll_string = dice_roll_string.downcase.gsub(' ', '')
 			if valid_dice_roll_string?
@@ -50,6 +50,13 @@ module PhyshRoller
 				:roll_modifier 	=> @roll_modifier,
 				:sum						=> (@dice_array.map { |die| die.last_result }.reduce(:+) + @roll_modifier)
 			}
+		end
+
+		def output_results
+			results = self.results
+			@output.puts "You rolled: #{results[:dice_roll]}"
+			@output.puts "Dice rolls: #{results[:dice_rolls].join(',')}"
+			@output.puts "Total: #{results[:sum]}"
 		end
 	end
 end
