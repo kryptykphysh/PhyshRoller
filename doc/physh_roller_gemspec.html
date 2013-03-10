@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>physh_roller.gemspec - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body class="file">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -42,6 +42,8 @@
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
 
+
+  
 
   <div id="project-metadata">
     <nav id="fileindex-section" class="section project-section">
@@ -166,8 +168,33 @@
 </nav>
 
 <div id="documentation" class="description">
-<p>This is the API documentation for RDoc Documentation.
+  
+<p>Gem::Specification.new do |s|</p>
+
+<pre>s.name         = &quot;physh_roller&quot;
+s.version      = &quot;1.0.0&quot;
+s.author       = &quot;Kryptyk Fysh&quot;
+s.email        = &quot;kryptykfysh@kryptykfysh.co.uk&quot;
+s.homepage     = &quot;https://github.com/kryptykfysh/PhyshRoller&quot;
+s.summary      = &quot;A dice rolling application&quot;
+s.description  = File.read(File.join(File.dirname(__FILE__), &#39;README&#39;))
+s.license      = &#39;MIT&#39;
+
+s.files         = Dir[&quot;{bin,lib}   /*&quot;] + %w(LICENSE README)
+s.test_files    = Dir[&quot;spec/   *&quot;]
+s.executables   = [ &#39;dice&#39; ]
+s.bindir        = &#39;bin&#39;
+s.extra_rdoc_files = [&#39;README&#39;]
+s.post_install_message = &#39;Thanks for installing PhyshRoller!&#39;
+
+s.required_ruby_version = &#39;&gt;=1.9&#39;
+s.add_development_dependency &#39;rspec&#39;
+s.add_development_dependency &#39;cucumber&#39;</pre>
+
+<p>end</p>
+
 </div>
+
 
 
 <footer id="validator-badges">

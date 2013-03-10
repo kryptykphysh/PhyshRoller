@@ -79,6 +79,8 @@
     
     <li ><a href="#method-i-number_of_dice">#number_of_dice</a>
     
+    <li ><a href="#method-i-output_results">#output_results</a>
+    
     <li ><a href="#method-i-results">#results</a>
     
     <li ><a href="#method-i-roll_dice">#roll_dice</a>
@@ -98,13 +100,97 @@
 
   <ul>
   
+    <li class="file"><a href="../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+    <li class="file"><a href="../doc/LICENSE_html.html">LICENSE.html</a>
+  
+    <li class="file"><a href="../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../doc/Output_html.html">Output.html</a>
+  
+    <li class="file"><a href="../doc/PhyshRoller_html.html">PhyshRoller.html</a>
+  
+    <li class="file"><a href="../doc/PhyshRoller/DiceRoll_html.html">DiceRoll.html</a>
+  
+    <li class="file"><a href="../doc/PhyshRoller/Die_html.html">Die.html</a>
+  
+    <li class="file"><a href="../doc/README_html.html">README.html</a>
+  
     <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/doc/Object_html_html.html">Object_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/Output_html_html.html">Output_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/PhyshRoller/DiceRoll_html_html.html">DiceRoll_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/PhyshRoller/Die_html_html.html">Die_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/PhyshRoller_html_html.html">PhyshRoller_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/features/physh_roller/parse_dice_roll_string_feature_html_html.html">parse_dice_roll_string_feature_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/features/physh_roller/roll_dice_feature_html_html.html">roll_dice_feature_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/features/physh_roller/roll_die_feature_html_html.html">roll_die_feature_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="../doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="../doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="../doc/features/physh_roller/parse_dice_roll_string_feature_html.html">parse_dice_roll_string_feature.html</a>
+  
+    <li class="file"><a href="../doc/features/physh_roller/roll_dice_feature_html.html">roll_dice_feature.html</a>
+  
+    <li class="file"><a href="../doc/features/physh_roller/roll_die_feature_html.html">roll_die_feature.html</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/physh_roller_gemspec_html.html">physh_roller_gemspec.html</a>
+  
+    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
   
     <li class="file"><a href="../features/physh_roller/parse_dice_roll_string_feature.html">parse_dice_roll_string.feature</a>
   
     <li class="file"><a href="../features/physh_roller/roll_dice_feature.html">roll_dice.feature</a>
   
     <li class="file"><a href="../features/physh_roller/roll_die_feature.html">roll_die.feature</a>
+  
+    <li class="file"><a href="../physh_roller_gemspec.html">physh_roller.gemspec</a>
   
   </ul>
 </nav>
@@ -153,7 +239,8 @@
       
         <dt id="DICE_ROLL_REGEXP">DICE_ROLL_REGEXP
         
-        <dd class="description">
+        <dd class="description"><p>Splits a dice roll string in to the :number_of_dice, :sides_on_dice and
+:roll_modifier capture groups.</p>
         
       
       </dl>
@@ -187,7 +274,7 @@
 
         <div class="method-description">
         
-        
+        <p>The original dice roll string, downcased and validated.</p>
         
         </div>
       </div>
@@ -231,7 +318,7 @@
         
         <div class="method-heading">
           <span class="method-name">new</span><span
-            class="method-args">(dice_roll_string, output)</span>
+            class="method-args">(dice_roll_string, output=$stdout)</span>
           
           <span class="method-click-advice">click to toggle source</span>
           
@@ -240,14 +327,17 @@
 
         <div class="method-description">
           
-          
+          <p>Accepts the initial :dice_roll_string and sets the default attributes.</p>
+
+<p>Can also take an :output attribute, which is currently only used for test
+doubles, but down the line may be used for other nefarious purposes.</p>
           
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 8</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">dice_roll_string</span>, <span class="ruby-identifier">output</span>)
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 18</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">dice_roll_string</span>, <span class="ruby-identifier">output</span>=<span class="ruby-identifier">$stdout</span>)
         <span class="ruby-ivar">@output</span> = <span class="ruby-identifier">output</span>
         <span class="ruby-ivar">@dice_roll_string</span> = <span class="ruby-identifier">dice_roll_string</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-string">&#39; &#39;</span>, <span class="ruby-string">&#39;&#39;</span>)
         <span class="ruby-keyword">if</span> <span class="ruby-identifier">valid_dice_roll_string?</span>
@@ -286,13 +376,14 @@
 
         <div class="method-description">
           
-          
+          <p>Creates the required instances of the <a href="Die.html">Die</a> class and
+adds them to the :dice_array</p>
           
           
 
           
           <div class="method-source-code" id="add_dice_to_dice_array-source">
-            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 35</span>
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 40</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_dice_to_dice_array</span>(<span class="ruby-identifier">number_of_dice</span>, <span class="ruby-identifier">sides_on_dice</span>)
         <span class="ruby-identifier">number_of_dice</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword">do</span>
                 <span class="ruby-identifier">die</span> = <span class="ruby-constant">Die</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">sides_on_dice</span>)
@@ -328,7 +419,7 @@
 
           
           <div class="method-source-code" id="number_of_dice-source">
-            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 42</span>
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">number_of_dice</span>
         <span class="ruby-ivar">@dice_array</span>.<span class="ruby-identifier">size</span>
 <span class="ruby-keyword">end</span></pre>
@@ -340,6 +431,42 @@
 
         
       </div><!-- number_of_dice-method -->
+
+    
+      <div id="method-i-output_results" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">output_results</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="output_results-source">
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 60</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">output_results</span>
+        <span class="ruby-identifier">results</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">results</span>
+        <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;You rolled: #{results[:dice_roll]}&quot;</span>
+        <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Dice rolls: #{results[:dice_rolls].join(&#39;,&#39;)}&quot;</span>
+        <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Total: #{results[:sum]}&quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- output_results-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- output_results-method -->
 
     
       <div id="method-i-results" class="method-detail ">
@@ -361,7 +488,7 @@
 
           
           <div class="method-source-code" id="results-source">
-            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 46</span>
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 51</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">results</span>
         <span class="ruby-identifier">results_hash</span> = { 
                 <span class="ruby-value">:dice_roll</span>                  =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@dice_roll_string</span>,
@@ -399,9 +526,10 @@
 
           
           <div class="method-source-code" id="roll_dice-source">
-            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 31</span>
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 33</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">roll_dice</span>
         <span class="ruby-ivar">@dice_array</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">die</span><span class="ruby-operator">|</span> <span class="ruby-identifier">die</span>.<span class="ruby-identifier">roll</span> }
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>
 <span class="ruby-keyword">end</span></pre>
           </div><!-- roll_dice-source -->
           
@@ -411,43 +539,6 @@
 
         
       </div><!-- roll_dice-method -->
-
-    
-      <div id="method-i-set_default_values" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">set_default_values</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="set_default_values-source">
-            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 23</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_default_values</span>
-        <span class="ruby-ivar">@number_of_dice</span>, <span class="ruby-ivar">@sides_on_dice</span>, <span class="ruby-ivar">@roll_modifier</span> =
-                        <span class="ruby-constant">DICE_ROLL_REGEXP</span>.<span class="ruby-identifier">match</span>(<span class="ruby-ivar">@dice_roll_string</span>).<span class="ruby-identifier">captures</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">capture</span><span class="ruby-operator">|</span> <span class="ruby-identifier">capture</span>.<span class="ruby-identifier">to_i</span> }
-        <span class="ruby-ivar">@number_of_dice</span> = <span class="ruby-value">1</span> <span class="ruby-keyword">unless</span> (<span class="ruby-ivar">@number_of_dice</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
-        <span class="ruby-ivar">@roll_modifier</span> <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
-        <span class="ruby-ivar">@dice_array</span> = []
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- set_default_values-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- set_default_values-method -->
 
     
       <div id="method-i-valid_dice_roll_string-3F" class="method-detail ">
@@ -469,7 +560,7 @@
 
           
           <div class="method-source-code" id="valid_dice_roll_string-3F-source">
-            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 19</span>
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 29</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">valid_dice_roll_string?</span>
         <span class="ruby-operator">!</span><span class="ruby-operator">!</span>(<span class="ruby-ivar">@dice_roll_string</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">DICE_ROLL_REGEXP</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -484,6 +575,49 @@
 
     
     </section><!-- public-instance-method-details -->
+  
+     <section id="private-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Private Instance Methods</h3>
+
+    
+      <div id="method-i-set_default_values" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_default_values</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Generates the default attrributes from the validated :dice_roll_string.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="set_default_values-source">
+            <pre><span class="ruby-comment"># File lib/physh_roller/dice_roll.rb, line 71</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_default_values</span>
+        <span class="ruby-ivar">@number_of_dice</span>, <span class="ruby-ivar">@sides_on_dice</span>, <span class="ruby-ivar">@roll_modifier</span> =
+                        <span class="ruby-constant">DICE_ROLL_REGEXP</span>.<span class="ruby-identifier">match</span>(<span class="ruby-ivar">@dice_roll_string</span>).<span class="ruby-identifier">captures</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">capture</span><span class="ruby-operator">|</span> <span class="ruby-identifier">capture</span>.<span class="ruby-identifier">to_i</span> }
+        <span class="ruby-ivar">@number_of_dice</span> = <span class="ruby-value">1</span> <span class="ruby-keyword">unless</span> (<span class="ruby-ivar">@number_of_dice</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+        <span class="ruby-ivar">@roll_modifier</span> <span class="ruby-operator">||=</span> <span class="ruby-value">0</span>
+        <span class="ruby-ivar">@dice_array</span> = []
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_default_values-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_default_values-method -->
+
+    
+    </section><!-- private-instance-method-details -->
   
   </section><!-- 5Buntitled-5D -->
 

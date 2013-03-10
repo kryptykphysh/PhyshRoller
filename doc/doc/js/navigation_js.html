@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>roll_dice.feature - RDoc Documentation</title>
+<title>navigation.js - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
 
@@ -169,27 +169,148 @@
 
 <div id="documentation" class="description">
   
-<p>Feature: Roll dice</p>
+<pre>Navigation allows movement using the arrow keys through the search results.
 
-<pre>As a user
-I want to roll a set of dice
-To get a set of rolls and a total
+When using this library you will need to set scrollIntoView to the
+appropriate function for your layout.  Use scrollInWindow if the container
+is not scrollable and scrollInElement if the container is a separate
+scrolling region.</pre>
 
-Scenario Outline: getting the result of rolling some dice
-        Given I have a dice roll string described by &quot;&lt;dice_roll_string&gt;&quot;
-        When I roll the set of dice
-        Then the result should have &quot;&lt;number_of_dice&gt;&quot;
-        And each die roll should be equal to or greater than &quot;&lt;lower_limit&gt;&quot;
-        And each die roll should be equal to or less than &quot;&lt;upper_limit&gt;&quot;
-        And the total should be equal to or greater than &quot;&lt;lowest_total&gt;&quot;
-        And the total should be equal to or less than &quot;&lt;upper_total&gt;&quot;
+<p>Navigation = new function() {</p>
 
-        Scenarios: different dice strings
-        | dice_roll_string | lower_limit | upper_limit | lowest_total | upper_total | number_of_dice |
-        | 1d6                                            | 1           | 6           | 1            | 6           | 1              |
-        | 3d4              | 1           | 4           | 3            | 12          | 3              |
-        | 1d6+1            | 1           | 6           | 2            | 7           | 1              |
-        | 3d4-2            | 1           | 4           | 1            | 10          | 3              |</pre>
+<pre>this.initNavigation = function() {
+  var _this = this;
+
+  $(document).keydown(function(e) {
+    _this.onkeydown(e);
+  }).keyup(function(e) {
+    _this.onkeyup(e);
+  });
+
+  this.navigationActive = true;
+}
+
+this.setNavigationActive = function(state) {
+  this.navigationActive = state;
+  this.clearMoveTimeout();
+}
+
+this.onkeyup = function(e) {
+  if (!this.navigationActive) return;
+
+  switch(e.keyCode) {
+    case 37: //Event.KEY_LEFT:
+    case 38: //Event.KEY_UP:
+    case 39: //Event.KEY_RIGHT:
+    case 40: //Event.KEY_DOWN:
+      this.clearMoveTimeout();
+      break;
+  }
+}
+
+this.onkeydown = function(e) {
+  if (!this.navigationActive) return;
+  switch(e.keyCode) {
+    case 37: //Event.KEY_LEFT:
+      if (this.moveLeft()) e.preventDefault();
+      break;
+    case 38: //Event.KEY_UP:
+      if (e.keyCode == 38 || e.ctrlKey) {
+        if (this.moveUp()) e.preventDefault();
+        this.startMoveTimeout(false);
+      }
+      break;
+    case 39: //Event.KEY_RIGHT:
+      if (this.moveRight()) e.preventDefault();
+      break;
+    case 40: //Event.KEY_DOWN:
+      if (e.keyCode == 40 || e.ctrlKey) {
+        if (this.moveDown()) e.preventDefault();
+        this.startMoveTimeout(true);
+      }
+      break;
+    case 13: //Event.KEY_RETURN:
+      if (this.$current)
+        e.preventDefault();
+        this.select(this.$current);
+      break;
+  }
+  if (e.ctrlKey &amp;&amp; e.shiftKey) this.select(this.$current);
+}
+
+this.clearMoveTimeout = function() {
+  clearTimeout(this.moveTimeout);
+  this.moveTimeout = null;
+}
+
+this.startMoveTimeout = function(isDown) {
+  if (!$.browser.mozilla &amp;&amp; !$.browser.opera) return;
+  if (this.moveTimeout) this.clearMoveTimeout();
+  var _this = this;
+
+  var go = function() {
+    if (!_this.moveTimeout) return;
+    _this[isDown ? &#39;moveDown&#39; : &#39;moveUp&#39;]();
+    _this.moveTimout = setTimeout(go, 100);
+  }
+  this.moveTimeout = setTimeout(go, 200);
+}
+
+this.moveRight = function() {
+}
+
+this.moveLeft = function() {
+}
+
+this.move = function(isDown) {
+}
+
+this.moveUp = function() {
+  return this.move(false);
+}
+
+this.moveDown = function() {
+  return this.move(true);
+}
+
+/*
+   Scrolls to the given element in the scrollable element view.
+  /
+this.scrollInElement = function(element, view) {
+  var offset, viewHeight, viewScroll, height;
+  offset = element.offsetTop;
+  height = element.offsetHeight;
+  viewHeight = view.offsetHeight;
+  viewScroll = view.scrollTop;
+
+  if (offset - viewScroll + height &gt; viewHeight) {
+    view.scrollTop = offset - viewHeight + height;
+  }
+  if (offset &lt; viewScroll) {
+    view.scrollTop = offset;
+  }
+}
+
+/*
+   Scrolls to the given element in the window.  The second argument is
+   ignored
+  /
+this.scrollInWindow = function(element, ignored) {
+  var offset, viewHeight, viewScroll, height;
+  offset = element.offsetTop;
+  height = element.offsetHeight;
+  viewHeight = window.innerHeight;
+  viewScroll = window.scrollY;
+
+  if (offset - viewScroll + height &gt; viewHeight) {
+    window.scrollTo(window.scrollX, offset - viewHeight + height);
+  }
+  if (offset &lt; viewScroll) {
+    window.scrollTo(window.scrollX, offset);
+  }
+}</pre>
+
+<p>}</p>
 
 </div>
 

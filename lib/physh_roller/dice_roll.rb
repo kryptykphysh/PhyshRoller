@@ -9,6 +9,12 @@ module PhyshRoller
 
 		attr_reader :sides_on_dice, :roll_modifier, :dice_array
 		
+		# Accepts the initial :dice_roll_string and sets the default
+		# attributes.
+		#
+		# Can also take an :output attribute, which is currently only
+		# used for test doubles, but down the line may be used for other
+		# nefarious purposes.
 		def initialize(dice_roll_string, output=$stdout)
 			@output = output
 			@dice_roll_string = dice_roll_string.downcase.gsub(' ', '')
@@ -24,19 +30,13 @@ module PhyshRoller
 			!!(@dice_roll_string =~ DICE_ROLL_REGEXP)
 		end
 
-		def set_default_values
-			@number_of_dice, @sides_on_dice, @roll_modifier =
-					DICE_ROLL_REGEXP.match(@dice_roll_string).captures.map { |capture| capture.to_i }
-			@number_of_dice = 1 unless (@number_of_dice > 0)
-			@roll_modifier ||= 0
-			@dice_array = []
-		end
-
 		def roll_dice
 			@dice_array.each { |die| die.roll }
 			return self
 		end
 
+		# Creates the required instances of the Die class and adds
+		# them to the :dice_array
 		def add_dice_to_dice_array(number_of_dice, sides_on_dice)
 			number_of_dice.times do
 				die = Die.new(sides_on_dice)
@@ -62,6 +62,18 @@ module PhyshRoller
 			@output.puts "You rolled: #{results[:dice_roll]}"
 			@output.puts "Dice rolls: #{results[:dice_rolls].join(',')}"
 			@output.puts "Total: #{results[:sum]}"
+		end
+
+		private
+
+		# Generates the default attrributes from the validated
+		# :dice_roll_string.
+		def set_default_values
+			@number_of_dice, @sides_on_dice, @roll_modifier =
+					DICE_ROLL_REGEXP.match(@dice_roll_string).captures.map { |capture| capture.to_i }
+			@number_of_dice = 1 unless (@number_of_dice > 0)
+			@roll_modifier ||= 0
+			@dice_array = []
 		end
 	end
 end

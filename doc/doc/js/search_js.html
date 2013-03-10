@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>roll_dice.feature - RDoc Documentation</title>
+<title>search.js - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
 
@@ -169,27 +169,102 @@
 
 <div id="documentation" class="description">
   
-<p>Feature: Roll dice</p>
+<p>Search = function(data, input, result) {</p>
 
-<pre>As a user
-I want to roll a set of dice
-To get a set of rolls and a total
+<pre>this.data = data;
+this.$input = $(input);
+this.$result = $(result);
 
-Scenario Outline: getting the result of rolling some dice
-        Given I have a dice roll string described by &quot;&lt;dice_roll_string&gt;&quot;
-        When I roll the set of dice
-        Then the result should have &quot;&lt;number_of_dice&gt;&quot;
-        And each die roll should be equal to or greater than &quot;&lt;lower_limit&gt;&quot;
-        And each die roll should be equal to or less than &quot;&lt;upper_limit&gt;&quot;
-        And the total should be equal to or greater than &quot;&lt;lowest_total&gt;&quot;
-        And the total should be equal to or less than &quot;&lt;upper_total&gt;&quot;
+this.$current = null;
+this.$view = this.$result.parent();
+this.searcher = new Searcher(data.index);
+this.init();</pre>
 
-        Scenarios: different dice strings
-        | dice_roll_string | lower_limit | upper_limit | lowest_total | upper_total | number_of_dice |
-        | 1d6                                            | 1           | 6           | 1            | 6           | 1              |
-        | 3d4              | 1           | 4           | 3            | 12          | 3              |
-        | 1d6+1            | 1           | 6           | 2            | 7           | 1              |
-        | 3d4-2            | 1           | 4           | 1            | 10          | 3              |</pre>
+<p>}</p>
+
+<p>Search.prototype = $.extend({}, Navigation, new function() {</p>
+
+<pre>var suid = 1;
+
+this.init = function() {
+  var _this = this;
+  var observer = function() {
+    _this.search(_this.$input[0].value);
+  };
+  this.$input.keyup(observer);
+  this.$input.click(observer); // mac&#39;s clear field
+
+  this.searcher.ready(function(results, isLast) {
+    _this.addResults(results, isLast);
+  })
+
+  this.initNavigation();
+  this.setNavigationActive(false);
+}
+
+this.search = function(value, selectFirstMatch) {
+  value = jQuery.trim(value).toLowerCase();
+  if (value) {
+    this.setNavigationActive(true);
+  } else {
+    this.setNavigationActive(false);
+  }
+
+  if (value == &#39;&#39;) {
+    this.lastQuery = value;
+    this.$result.empty();
+    this.setNavigationActive(false);
+  } else if (value != this.lastQuery) {
+    this.lastQuery = value;
+    this.firstRun = true;
+    this.searcher.find(value);
+  }
+}
+
+this.addResults = function(results, isLast) {
+  var target = this.$result.get(0);
+  if (this.firstRun &amp;&amp; (results.length &gt; 0 || isLast)) {
+    this.$current = null;
+    this.$result.empty();
+  }
+
+  for (var i=0, l = results.length; i &lt; l; i++) {
+    target.appendChild(this.renderItem.call(this, results[i]));
+  };
+
+  if (this.firstRun &amp;&amp; results.length &gt; 0) {
+    this.firstRun = false;
+    this.$current = $(target.firstChild);
+    this.$current.addClass(&#39;current&#39;);
+  }
+  if (jQuery.browser.msie) this.$element[0].className += &#39;&#39;;
+}
+
+this.move = function(isDown) {
+  if (!this.$current) return;
+  var $next = this.$current[isDown ? &#39;next&#39; : &#39;prev&#39;]();
+  if ($next.length) {
+    this.$current.removeClass(&#39;current&#39;);
+    $next.addClass(&#39;current&#39;);
+    this.scrollIntoView($next[0], this.$view[0]);
+    this.$current = $next;
+  }
+  return true;
+}
+
+this.hlt = function(html) {
+  return this.escapeHTML(html).
+    replace(/\u0001/g, &#39;&lt;em&gt;&#39;).
+    replace(/\u0002/g, &#39;&lt;/em&gt;&#39;);
+}
+
+this.escapeHTML = function(html) {
+  return html.replace(/[&amp;&lt;&gt;]/g, function(c) {
+    return &#39;&amp;#&#39; + c.charCodeAt(0) + &#39;;&#39;;
+  });
+}</pre>
+
+<p>});</p>
 
 </div>
 

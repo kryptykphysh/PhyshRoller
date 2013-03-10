@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>roll_dice.feature - RDoc Documentation</title>
+<title>darkfish.js - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
 
@@ -169,27 +169,180 @@
 
 <div id="documentation" class="description">
   
-<p>Feature: Roll dice</p>
+<pre>Darkfish Page Functions
+$Id: darkfish.js 53 2009-01-07 02:52:03Z deveiant $
 
-<pre>As a user
-I want to roll a set of dice
-To get a set of rolls and a total
+Author: Michael Granger &lt;mgranger@laika.com&gt;
 
-Scenario Outline: getting the result of rolling some dice
-        Given I have a dice roll string described by &quot;&lt;dice_roll_string&gt;&quot;
-        When I roll the set of dice
-        Then the result should have &quot;&lt;number_of_dice&gt;&quot;
-        And each die roll should be equal to or greater than &quot;&lt;lower_limit&gt;&quot;
-        And each die roll should be equal to or less than &quot;&lt;upper_limit&gt;&quot;
-        And the total should be equal to or greater than &quot;&lt;lowest_total&gt;&quot;
-        And the total should be equal to or less than &quot;&lt;upper_total&gt;&quot;
+Provide console simulation for firebug-less environments</pre>
 
-        Scenarios: different dice strings
-        | dice_roll_string | lower_limit | upper_limit | lowest_total | upper_total | number_of_dice |
-        | 1d6                                            | 1           | 6           | 1            | 6           | 1              |
-        | 3d4              | 1           | 4           | 3            | 12          | 3              |
-        | 1d6+1            | 1           | 6           | 2            | 7           | 1              |
-        | 3d4-2            | 1           | 4           | 1            | 10          | 3              |</pre>
+<p>if (!(“console” in window) || !(“firebug” in console)) {</p>
+
+<pre>var names = [&quot;log&quot;, &quot;debug&quot;, &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;, &quot;assert&quot;, &quot;dir&quot;, &quot;dirxml&quot;,
+  &quot;group&quot;, &quot;groupEnd&quot;, &quot;time&quot;, &quot;timeEnd&quot;, &quot;count&quot;, &quot;trace&quot;, &quot;profile&quot;, &quot;profileEnd&quot;];
+
+window.console = {};
+for (var i = 0; i &lt; names.length; ++i)
+  window.console[names[i]] = function() {};</pre>
+
+<p>};</p>
+
+<p>/**</p>
+
+<pre> Unwrap the first element that matches the given @expr@ from the targets and return them.
+/</pre>
+
+<p>$.fn.unwrap = function( expr ) {</p>
+
+<pre>return this.each( function() {
+  $(this).parents( expr ).eq( 0 ).after( this ).remove();
+});</pre>
+
+<p>};</p>
+
+<p>function showSource( e ) {</p>
+
+<pre>var target = e.target;
+var codeSections = $(target).
+  parents(&#39;.method-detail&#39;).
+  find(&#39;.method-source-code&#39;);
+
+$(target).
+  parents(&#39;.method-detail&#39;).
+  find(&#39;.method-source-code&#39;).
+  slideToggle();</pre>
+
+<p>};</p>
+
+<p>function hookSourceViews() {</p>
+
+<pre>$(&#39;.method-heading&#39;).click( showSource );</pre>
+
+<p>};</p>
+
+<p>function toggleDebuggingSection() {</p>
+
+<pre>$(&#39;.debugging-section&#39;).slideToggle();</pre>
+
+<p>};</p>
+
+<p>function hookDebuggingToggle() {</p>
+
+<pre>$(&#39;#debugging-toggle img&#39;).click( toggleDebuggingSection );</pre>
+
+<p>};</p>
+
+<p>function hookTableOfContentsToggle() {</p>
+
+<pre>$(&#39;.indexpage li .toc-toggle&#39;).each( function() {
+  $(this).click( function() {
+    $(this).toggleClass(&#39;open&#39;);
+  });
+
+  var section = $(this).next();
+
+  $(this).click( function() {
+    section.slideToggle();
+  });
+});</pre>
+
+<p>}</p>
+
+<p>function hookSearch() {</p>
+
+<pre>var input  = $(&#39;#search-field&#39;).eq(0);
+var result = $(&#39;#search-results&#39;).eq(0);
+$(result).show();
+
+var search_section = $(&#39;#search-section&#39;).get(0);
+$(search_section).show();
+
+var search = new Search(search_data, input, result);
+
+search.renderItem = function(result) {
+  var li = document.createElement(&#39;li&#39;);
+  var html = &#39;&#39;;
+
+  // TODO add relative path to &lt;script&gt; per-page
+  html += &#39;&lt;p class=&quot;search-match&quot;&gt;&lt;a href=&quot;&#39; + rdoc_rel_prefix + result.path + &#39;&quot;&gt;&#39; + this.hlt(result.title);
+  if (result.params)
+    html += &#39;&lt;span class=&quot;params&quot;&gt;&#39; + result.params + &#39;&lt;/span&gt;&#39;;
+  html += &#39;&lt;/a&gt;&#39;;
+
+  if (result.namespace)
+    html += &#39;&lt;p class=&quot;search-namespace&quot;&gt;&#39; + this.hlt(result.namespace);
+
+  if (result.snippet)
+    html += &#39;&lt;div class=&quot;search-snippet&quot;&gt;&#39; + result.snippet + &#39;&lt;/div&gt;&#39;;
+
+  li.innerHTML = html;
+
+  return li;
+}
+
+search.select = function(result) {
+  var result_element = result.get(0);
+  window.location.href = result_element.firstChild.firstChild.href;
+}
+
+search.scrollIntoView = search.scrollInWindow;</pre>
+
+<p>};</p>
+
+<p>function highlightTarget( anchor ) {</p>
+
+<pre>console.debug( &quot;Highlighting target &#39;%s&#39;.&quot;, anchor );
+
+$(&quot;a[name]&quot;).each( function() {
+  if ( $(this).attr(&quot;name&quot;) == anchor ) {
+    if ( !$(this).parent().parent().hasClass(&#39;target-section&#39;) ) {
+      console.debug( &quot;Wrapping the target-section&quot; );
+      $(&#39;div.method-detail&#39;).unwrap( &#39;div.target-section&#39; );
+      $(this).parent().wrap( &#39;&lt;div class=&quot;target-section&quot;&gt;&lt;/div&gt;&#39; );
+    } else {
+      console.debug( &quot;Already wrapped.&quot; );
+    }
+  }
+});</pre>
+
+<p>};</p>
+
+<p>function highlightLocationTarget() {</p>
+
+<pre>console.debug( &quot;Location hash: %s&quot;, window.location.hash );
+if ( ! window.location.hash || window.location.hash.length == 0 ) return;
+
+var anchor = window.location.hash.substring(1);
+console.debug( &quot;Found anchor: %s; matching %s&quot;, anchor, &quot;a[name=&quot; + anchor + &quot;]&quot; );
+
+highlightTarget( anchor );</pre>
+
+<p>};</p>
+
+<p>function highlightClickTarget( event ) {</p>
+
+<pre>console.debug( &quot;Highlighting click target for event %o&quot;, event.target );
+try {
+  var anchor = $(event.target).attr( &#39;href&#39; ).substring(1);
+  console.debug( &quot;Found target anchor: %s&quot;, anchor );
+  highlightTarget( anchor );
+} catch ( err ) {
+  console.error( &quot;Exception while highlighting: %o&quot;, err );
+};</pre>
+
+<p>};</p>
+
+<p>$(document).ready( function() {</p>
+
+<pre>hookSourceViews();
+hookDebuggingToggle();
+hookSearch();
+highlightLocationTarget();
+hookTableOfContentsToggle();
+
+$(&#39;ul.link-list a&#39;).bind( &quot;click&quot;, highlightClickTarget );</pre>
+
+<p>});</p>
 
 </div>
 

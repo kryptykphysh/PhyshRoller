@@ -4,7 +4,7 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 
-<title>RDoc Documentation</title>
+<title>README - RDoc Documentation</title>
 
 <link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
 
@@ -20,7 +20,7 @@
 <script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
 
 
-<body>
+<body class="file">
 <nav id="metadata">
   <nav id="home-section" class="section">
   <h3 class="section-header">
@@ -41,6 +41,20 @@
 
   <ul id="search-results" class="initially-hidden"></ul>
 </nav>
+
+
+  
+<div id="table-of-contents">
+  <nav class="section">
+    <h3 class="section-header">Table of Contents</h3>
+    <ul>
+      <li><a href="#label-"></a>
+      <li><a href="#label-"></a>
+      <li><a href="#label-"></a>
+      <li><a href="#label-"></a>
+    </ul>
+  </nav>
+</div>
 
 
   <div id="project-metadata">
@@ -166,8 +180,80 @@
 </nav>
 
 <div id="documentation" class="description">
-<p>This is the API documentation for RDoc Documentation.
+  
+<p>A simple dice rolling application.</p>
+
+<p>Usage</p>
+
+<h5 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h5>
+
+<p>Command Line</p>
+<hr style="height: 10px">
+
+<p>If you&#39;ve installed the gem, you can simply run:</p>
+
+<pre>dice &lt;the_dice_string_i_want_to_roll&gt;</pre>
+
+<p>Example dice strings are 4d6, 20d100-20, 14D2+6. Basically, anything that
+matches the regular expression /<a
+href=“http://+-”>A(d+)?d(d+)(</a>d*)?z/i.</p>
+
+<p>As A Module</p>
+<hr style="height: 9px">
+
+<p>You can require physh_roller in a Ruby application and then create
+dicerolls.</p>
+
+<p>For example:</p>
+
+<pre>dice_roll = PhyshRoller::DiceRoll.new(&#39;2d10+30&#39;)
+
+dice_roll.roll_dice
+
+first_roll = dice_roll.results
+
+dice_roll.roll_dice
+
+second_roll = dice_roll.results
+
+first_total = first_roll[:sum]
+
+second_total = second_roll[:sum]</pre>
+
+<p>Documentation</p>
+
+<h6 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+
+<p>More documentation is available in RDoc format in the /doc folder.</p>
+
+<p>Why Have You Done This Thing?</p>
+
+<h6 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+
+<p>I play RPGs a lot. A lot of the tools I build relate to these games and
+most of them use dice rolls. I got fed up having to do stuff on the fly and
+decided to do the thing properly.</p>
+
+<p>This is also my first real excursion in to really using BDD/TDD. I might
+have paid lip service to writing tests first, but the end goal was working
+code. This time I&#39;m (hopefully) doing it right.</p>
+
+<p>If you have the time, please take a look at the Cucumber and RSpec test
+suite and let me know where it can be improved. That goes for the rest of
+the code too. :)</p>
+
+<p>Where Does It Go From Here</p>
+
+<h6 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+
+<p>I fully intend to add functionality for exploding dice (reroll on maximum,
+or a threshold), successes on individual dice (as per Shadowrun or nWoD).</p>
+
+<p>Again, if there are any other dice strangenesses you would like to see
+implemented, please do let me know.</p>
+
 </div>
+
 
 
 <footer id="validator-badges">

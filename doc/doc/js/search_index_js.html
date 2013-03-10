@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>search_index.js - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../../README.html">README</a>
+  
+    <li class="file"><a href="../../doc/LICENSE_html.html">LICENSE.html</a>
+  
+    <li class="file"><a href="../../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../../doc/Output_html.html">Output.html</a>
+  
+    <li class="file"><a href="../../doc/PhyshRoller_html.html">PhyshRoller.html</a>
+  
+    <li class="file"><a href="../../doc/PhyshRoller/DiceRoll_html.html">DiceRoll.html</a>
+  
+    <li class="file"><a href="../../doc/PhyshRoller/Die_html.html">Die.html</a>
+  
+    <li class="file"><a href="../../doc/README_html.html">README.html</a>
+  
+    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../doc/doc/Object_html_html.html">Object_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Output_html_html.html">Output_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/PhyshRoller/DiceRoll_html_html.html">DiceRoll_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/PhyshRoller/Die_html_html.html">Die_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/PhyshRoller_html_html.html">PhyshRoller_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/features/physh_roller/parse_dice_roll_string_feature_html_html.html">parse_dice_roll_string_feature_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/features/physh_roller/roll_dice_feature_html_html.html">roll_dice_feature_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/features/physh_roller/roll_die_feature_html_html.html">roll_die_feature_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="../../doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="../../doc/features/physh_roller/parse_dice_roll_string_feature_html.html">parse_dice_roll_string_feature.html</a>
+  
+    <li class="file"><a href="../../doc/features/physh_roller/roll_dice_feature_html.html">roll_dice_feature.html</a>
+  
+    <li class="file"><a href="../../doc/features/physh_roller/roll_die_feature_html.html">roll_die_feature.html</a>
+  
+    <li class="file"><a href="../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../doc/physh_roller_gemspec_html.html">physh_roller_gemspec.html</a>
+  
+    <li class="file"><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../features/physh_roller/parse_dice_roll_string_feature.html">parse_dice_roll_string.feature</a>
+  
+    <li class="file"><a href="../../features/physh_roller/roll_dice_feature.html">roll_dice.feature</a>
+  
+    <li class="file"><a href="../../features/physh_roller/roll_die_feature.html">roll_die.feature</a>
+  
+    <li class="file"><a href="../../physh_roller_gemspec.html">physh_roller.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Object.html">Object</a>
+  
+    <li><a href="../../Output.html">Output</a>
+  
+    <li><a href="../../PhyshRoller.html">PhyshRoller</a>
+  
+    <li><a href="../../PhyshRoller/DiceRoll.html">PhyshRoller::DiceRoll</a>
+  
+    <li><a href="../../PhyshRoller/Die.html">PhyshRoller::Die</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>var search_data = {“index”:{“<a
+href="http://"object","output","physhroller","diceroll","die","add_dice_to_dice_array()","messages()","new()","new()","number_of_dice()","output()","output_results()","puts()","results()","roll()","roll_dice()","set_default_values()","valid_dice_roll_string?()","license","readme","object.html","output.html","physhroller.html","diceroll.html","die.html","created.rid","created_rid.html","parse_dice_roll_string_feature.html","roll_dice_feature.html","roll_die_feature.html","index.html","darkfish.js","jquery.js","navigation.js","search.js","search_index.js","searcher.js","rdoc.css","table_of_contents.html","parse_dice_roll_string.feature","roll_dice.feature","roll_die.feature","physh_roller.gemspec"">searchIndex”:</a>,“<a
+href=""object","output","physhroller","physhroller::diceroll","physhroller::die","physhroller::diceroll#add_dice_to_dice_array()","output#messages()","physhroller::diceroll::new()","physhroller::die::new()","physhroller::diceroll#number_of_dice()","object#output()","physhroller::diceroll#output_results()","output#puts()","physhroller::diceroll#results()","physhroller::die#roll()","physhroller::diceroll#roll_dice()","physhroller::diceroll#set_default_values()","physhroller::diceroll#valid_dice_roll_string?()","","","","","","","","","","","","","","","","","","","","","","","","",""">longSearchIndex”:</a>,“<a
+href="http://"Object","","Object.html","",""">info”:[</a>,[“<a
+href="http://"PhyshRoller","","PhyshRoller.html","",""">Output”,“”,“Output.html”,“”,“”],</a>,[“<a
+href=""PhyshRoller::Die","","PhyshRoller/Die.html","",""">:DiceRoll”,“”,“PhyshRoller/DiceRoll.html”,“”,“”],</a>,[“add_dice_to_dice_array”,“PhyshRoller::DiceRoll”,“PhyshRoller/DiceRoll.html#method-i-add_dice_to_dice_array”,“(number_of_dice,
+<a
+href="http://"messages","Output","Output.html#method-i-messages","()",""">sides_on_dice)”,“”],</a>,[“new”,“PhyshRoller::DiceRoll”,“PhyshRoller/DiceRoll.html#method-c-new”,“(dice_roll_string,
+<a
+href=""new","PhyshRoller::Die","PhyshRoller/Die.html#method-c-new","(sides_on_die)",""">output=$stdout)”,“”],</a>,[“<a
+href="http://"output","Object","Object.html#method-i-output","()",""">number_of_dice”,“PhyshRoller::DiceRoll”,“PhyshRoller/DiceRoll.html#method-i-number_of_dice”,“()”,“”],</a>,[“<a
+href="http://"puts","Output","Output.html#method-i-puts","(message)",""">output_results”,“PhyshRoller::DiceRoll”,“PhyshRoller/DiceRoll.html#method-i-output_results”,“()”,“”],</a>,[“<a
+href=""roll","PhyshRoller::Die","PhyshRoller/Die.html#method-i-roll","()",""">results”,“PhyshRoller::DiceRoll”,“PhyshRoller/DiceRoll.html#method-i-results”,“()”,“”],</a>,[“<a
+href=""set_default_values","PhyshRoller::DiceRoll","PhyshRoller/DiceRoll.html#method-i-set_default_values","()",""">roll_dice”,“PhyshRoller::DiceRoll”,“PhyshRoller/DiceRoll.html#method-i-roll_dice”,“()”,“”],</a>,[“valid_dice_roll_string?”,“PhyshRoller::DiceRoll”,“PhyshRoller/DiceRoll.html#method-i-valid_dice_roll_string-3F”,“()”,“”],[“LICENSE”,“”,“LICENSE.html”,“”,“&lt;p&gt;Copyright
+(C) 2013 Kryptyk Fyshn&lt;p&gt;Permission is hereby granted, free of
+charge, to any person obtaining
+…n”],[“README”,“”,“README.html”,“”,“&lt;p&gt;A simple dice rolling
+application.n&lt;p&gt;Usagen&lt;p&gt;n”],[“Object.html”,“”,“doc/Object_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Output.html”,“”,“doc/Output_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“PhyshRoller.html”,“”,“doc/PhyshRoller_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“DiceRoll.html”,“”,“doc/PhyshRoller/DiceRoll_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“Die.html”,“”,“doc/PhyshRoller/Die_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“created.rid”,“”,“doc/created_rid.html”,“”,“&lt;p&gt;Thu, 07 Mar 2013
+21:59:02 +1100 ./doc/created.rid       Thu, 07 Mar 2013n21:59:02 +1100
+./lib/physh_roller.rb
+…n”],[“created_rid.html”,“”,“doc/doc/created_rid_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“parse_dice_roll_string_feature.html”,“”,“doc/features/physh_roller/parse_dice_roll_string_feature_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“roll_dice_feature.html”,“”,“doc/features/physh_roller/roll_dice_feature_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“roll_die_feature.html”,“”,“doc/features/physh_roller/roll_die_feature_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“index.html”,“”,“doc/index_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“darkfish.js”,“”,“doc/js/darkfish_js.html”,“”,“n&lt;pre&gt;Darkfish
+Page Functionsn$Id: darkfish.js 53 2009-01-07 02:52:03Z deveiant $nnAuthor:
+Michael Granger
+…&lt;/pre&gt;n”],[“jquery.js”,“”,“doc/js/jquery_js.html”,“”,“n&lt;pre&gt;!n
+jQuery JavaScript Library v1.6.2n <a
+href="http://jquery.com/\n\n">jquery.com/nn</a> Copyright 2011, John Resign
+Dual licensed under
+…&lt;/pre&gt;n”],[“navigation.js”,“”,“doc/js/navigation_js.html”,“”,“n&lt;pre&gt;Navigation
+allows movement using the arrow keys through the search results.nnWhen
+using this library
+…&lt;/pre&gt;n”],[“search.js”,“”,“doc/js/search_js.html”,“”,“&lt;p&gt;Search
+= function(data, input, result) {nn&lt;pre&gt;this.data = data;nthis.$input
+= $(input);nthis.$result = $(result);
+…&lt;/pre&gt;n”],[“search_index.js”,“”,“doc/js/search_index_js.html”,“”,“&lt;p&gt;var
+search_data = {“index”:{“searchIndex”:,“longSearchIndex”:,“info”:[,[“
+…n”],[“searcher.js”,“”,“doc/js/searcher_js.html”,“”,“&lt;p&gt;Searcher =
+function(data) {nn&lt;pre&gt;this.data = data;nthis.handlers =
+[];&lt;/pre&gt;n&lt;p&gt;}n”],[“rdoc.css”,“”,“doc/rdoc_css.html”,“”,“n&lt;pre&gt;&amp;quot;Darkfish&amp;quot;
+Rdoc CSSn$Id: rdoc.css 54 2009-01-27 01:09:48Z deveiant $nnAuthor: Michael
+Granger &amp;lt;ged@FaerieMUD.org&amp;gt;
+…&lt;/pre&gt;n”],[“table_of_contents.html”,“”,“doc/table_of_contents_html.html”,“”,“&lt;p&gt;&amp;lt;!DOCTYPE
+html&amp;gt;n&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt;
+&amp;lt;meta content=“text/html; charset=UTF-8”
+…n”],[“parse_dice_roll_string.feature”,“”,“features/physh_roller/parse_dice_roll_string_feature.html”,“”,“&lt;p&gt;Feature:
+Parse String To Dice Rollnn&lt;pre&gt;As a usernTo create a dice rollnI
+want to parse a string in to its
+…&lt;/pre&gt;n”],[“roll_dice.feature”,“”,“features/physh_roller/roll_dice_feature.html”,“”,“&lt;p&gt;Feature:
+Roll dicenn&lt;pre&gt;As a usernI want to roll a set of dicenTo get a set
+of rolls and a totalnnScenario
+…&lt;/pre&gt;n”],[“roll_die.feature”,“”,“features/physh_roller/roll_die_feature.html”,“”,“&lt;p&gt;Feature:
+Simple Die Rollnn&lt;pre&gt;As a usernI want to roll a dienTo generate a
+random number between 1 and the
+…&lt;/pre&gt;n”],[“physh_roller.gemspec”,“”,“physh_roller_gemspec.html”,“”,“&lt;p&gt;Gem::Specification.new
+do |s|nn&lt;pre&gt;s.name         =
+&amp;quot;physh_roller&amp;quot;ns.version      =
+&amp;quot;1.0.0&amp;quot;ns.author       …&lt;/pre&gt;n”]]}}</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Object_html.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../../index.html">Home</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../../README.html">README</a>
+  
+    <li class="file"><a href="../../doc/LICENSE_html.html">LICENSE.html</a>
+  
+    <li class="file"><a href="../../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../../doc/Output_html.html">Output.html</a>
+  
+    <li class="file"><a href="../../doc/PhyshRoller_html.html">PhyshRoller.html</a>
+  
+    <li class="file"><a href="../../doc/PhyshRoller/DiceRoll_html.html">DiceRoll.html</a>
+  
+    <li class="file"><a href="../../doc/PhyshRoller/Die_html.html">Die.html</a>
+  
+    <li class="file"><a href="../../doc/README_html.html">README.html</a>
+  
+    <li class="file"><a href="../../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../../doc/doc/Object_html_html.html">Object_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/Output_html_html.html">Output_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/PhyshRoller/DiceRoll_html_html.html">DiceRoll_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/PhyshRoller/Die_html_html.html">Die_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/PhyshRoller_html_html.html">PhyshRoller_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/created_rid_html.html">created_rid.html</a>
+  
+    <li class="file"><a href="../../doc/doc/doc/created_rid_html_html.html">created_rid_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/features/physh_roller/parse_dice_roll_string_feature_html_html.html">parse_dice_roll_string_feature_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/features/physh_roller/roll_dice_feature_html_html.html">roll_dice_feature_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/features/physh_roller/roll_die_feature_html_html.html">roll_die_feature_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/index_html_html.html">index_html.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/darkfish_js_html.html">darkfish_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/jquery_js_html.html">jquery_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/navigation_js_html.html">navigation_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/search_index_js_html.html">search_index_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/search_js_html.html">search_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/js/searcher_js_html.html">searcher_js.html</a>
+  
+    <li class="file"><a href="../../doc/doc/rdoc_css_html.html">rdoc_css.html</a>
+  
+    <li class="file"><a href="../../doc/doc/table_of_contents_html_html.html">table_of_contents_html.html</a>
+  
+    <li class="file"><a href="../../doc/features/physh_roller/parse_dice_roll_string_feature_html.html">parse_dice_roll_string_feature.html</a>
+  
+    <li class="file"><a href="../../doc/features/physh_roller/roll_dice_feature_html.html">roll_dice_feature.html</a>
+  
+    <li class="file"><a href="../../doc/features/physh_roller/roll_die_feature_html.html">roll_die_feature.html</a>
+  
+    <li class="file"><a href="../../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../../doc/physh_roller_gemspec_html.html">physh_roller_gemspec.html</a>
+  
+    <li class="file"><a href="../../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../../features/physh_roller/parse_dice_roll_string_feature.html">parse_dice_roll_string.feature</a>
+  
+    <li class="file"><a href="../../features/physh_roller/roll_dice_feature.html">roll_dice.feature</a>
+  
+    <li class="file"><a href="../../features/physh_roller/roll_die_feature.html">roll_die.feature</a>
+  
+    <li class="file"><a href="../../physh_roller_gemspec.html">physh_roller.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Object.html">Object</a>
+  
+    <li><a href="../../Output.html">Output</a>
+  
+    <li><a href="../../PhyshRoller.html">PhyshRoller</a>
+  
+    <li><a href="../../PhyshRoller/DiceRoll.html">PhyshRoller::DiceRoll</a>
+  
+    <li><a href="../../PhyshRoller/Die.html">PhyshRoller::Die</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&gt;</p>
+
+<p>&lt;title&gt;Object.html - RDoc Documentation&lt;/title&gt;</p>
+
+<p>&lt;link type=“text/css” media=“screen” href=“../rdoc.css”
+rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;../&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script type=“text/javascript” charset=“utf-8”
+src=“../js/jquery.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“../js/navigation.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/search_index.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/search.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“../js/searcher.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“../js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body class=“file”&gt; &lt;nav id=“metadata”&gt;</p>
+
+<pre>&lt;nav id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;
+  &lt;a href=&quot;../index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;../table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;../table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/h3&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;nav id=&quot;search-section&quot; class=&quot;section project-section&quot; class=&quot;initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; id=&quot;search-field&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/h3&gt;
+&lt;/form&gt;
+
+&lt;ul id=&quot;search-results&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;nav id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Pages&lt;/h3&gt;
+
+&lt;ul&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../LICENSE.html&quot;&gt;LICENSE&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../README.html&quot;&gt;README&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/Object_html.html&quot;&gt;Object.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/Output_html.html&quot;&gt;Output.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/PhyshRoller_html.html&quot;&gt;PhyshRoller.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/PhyshRoller/DiceRoll_html.html&quot;&gt;DiceRoll.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/PhyshRoller/Die_html.html&quot;&gt;Die.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/created_rid.html&quot;&gt;created.rid&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/doc/created_rid_html.html&quot;&gt;created_rid.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/features/physh_roller/parse_dice_roll_string_feature_html.html&quot;&gt;parse_dice_roll_string_feature.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/features/physh_roller/roll_dice_feature_html.html&quot;&gt;roll_dice_feature.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/features/physh_roller/roll_die_feature_html.html&quot;&gt;roll_die_feature.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/index_html.html&quot;&gt;index.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/js/darkfish_js.html&quot;&gt;darkfish.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/js/jquery_js.html&quot;&gt;jquery.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/js/navigation_js.html&quot;&gt;navigation.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/js/search_js.html&quot;&gt;search.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/js/search_index_js.html&quot;&gt;search_index.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/js/searcher_js.html&quot;&gt;searcher.js&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/rdoc_css.html&quot;&gt;rdoc.css&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../doc/table_of_contents_html.html&quot;&gt;table_of_contents.html&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../features/physh_roller/parse_dice_roll_string_feature.html&quot;&gt;parse_dice_roll_string.feature&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../features/physh_roller/roll_dice_feature.html&quot;&gt;roll_dice.feature&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../features/physh_roller/roll_die_feature.html&quot;&gt;roll_die.feature&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;../physh_roller_gemspec.html&quot;&gt;physh_roller.gemspec&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>  &lt;nav id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Class and Module Index&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../Object.html&quot;&gt;Object&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../Output.html&quot;&gt;Output&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../PhyshRoller.html&quot;&gt;PhyshRoller&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../PhyshRoller/DiceRoll.html&quot;&gt;PhyshRoller::DiceRoll&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;../PhyshRoller/Die.html&quot;&gt;PhyshRoller::Die&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;div id=“documentation” class=“description”&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta
+content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;title&amp;gt;class &lt;a
+href=“../Object.html”&gt;Object&lt;/a&gt; - RDoc
+Documentation&amp;lt;/title&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;link type=“text/css” media=“screen” href=“./rdoc.css”
+rel=“stylesheet”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;script type=“text/javascript”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;var rdoc_rel_prefix = &amp;quot;./&amp;quot;;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/script&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;script type=“text/javascript” charset=“utf-8”
+src=“./js/jquery.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/navigation.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search_index.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/searcher.js”&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/darkfish.js”&amp;gt;&amp;lt;/script&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;body id=“top” class=“class”&amp;gt; &amp;lt;nav
+id=“metadata”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;nav id=&amp;quot;home-section&amp;quot;
+class=&amp;quot;section&amp;quot;&amp;gt; &amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;a href=&amp;quot;./index.html&amp;quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;./table_of_contents.html#classes&amp;quot;&amp;gt;Classes&amp;lt;/a&amp;gt;
+&amp;lt;a href=&amp;quot;./table_of_contents.html#methods&amp;quot;&amp;gt;Methods&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/h3&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;nav id=&amp;quot;search-section&amp;quot;
+class=&amp;quot;section project-section&amp;quot;
+class=&amp;quot;initially-hidden&amp;quot;&amp;gt; &amp;lt;form
+action=&amp;quot;#&amp;quot; method=&amp;quot;get&amp;quot;
+accept-charset=&amp;quot;utf-8&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;h3 class=&amp;quot;section-header&amp;quot;&amp;gt;
+  &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;search&amp;quot; placeholder=&amp;quot;Search&amp;quot; id=&amp;quot;search-field&amp;quot;
+         title=&amp;quot;Type to search, Up and Down to navigate, Enter to load&amp;quot;&amp;gt;
+&amp;lt;/h3&amp;gt;</pre>
+
+<p>&amp;lt;/form&amp;gt;</p>
+
+<p>&amp;lt;ul id=&amp;quot;search-results&amp;quot;
+class=&amp;quot;initially-hidden&amp;quot;&amp;gt;&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;div id=&amp;quot;file-metadata&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;nav id=&amp;quot;file-list-section&amp;quot; class=&amp;quot;section&amp;quot;&amp;gt;</pre>
+
+<p>&amp;lt;h3 class=&amp;quot;section-header&amp;quot;&amp;gt;Defined
+In&amp;lt;/h3&amp;gt; &amp;lt;ul&amp;gt;</p>
+
+<pre>&amp;lt;li&amp;gt;features/step_definitions/physh_roller/physh_roller_steps.rb
+&amp;lt;li&amp;gt;spec/spec_helper.rb</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;/div&amp;gt;</p>
+
+<p>&amp;lt;div id=&amp;quot;class-metadata&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;nav id=&amp;quot;parent-class-section&amp;quot; class=&amp;quot;section&amp;quot;&amp;gt;</pre>
+
+<p>&amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Parent&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;p class=&amp;quot;link&amp;quot;&amp;gt;BasicObject&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;!– Included Modules –&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;nav id=“includes-section”
+class=“section”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Included
+Modules&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;ul class=&amp;quot;link-list&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;li&amp;gt;&amp;lt;span class=&amp;quot;include&amp;quot;&amp;gt;RSpec::Matchers&amp;lt;/span&amp;gt;</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;!– Method Quickref –&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;nav id=“method-list-section”
+class=“section”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Methods&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;ul class=&amp;quot;link-list&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;li &amp;gt;&amp;lt;a href=&amp;quot;#method-i-output&amp;quot;&amp;gt;#output&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;/div&amp;gt;</p>
+
+<p>&amp;lt;div id=&amp;quot;project-metadata&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;nav id=&amp;quot;fileindex-section&amp;quot; class=&amp;quot;section project-section&amp;quot;&amp;gt;</pre>
+
+<p>&amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Pages&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;ul&amp;gt;</p>
+
+<pre>&amp;lt;li class=&amp;quot;file&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;./doc/created_rid.html&amp;quot;&amp;gt;created.rid&amp;lt;/a&amp;gt;
+
+&amp;lt;li class=&amp;quot;file&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;./features/physh_roller/parse_dice_roll_string_feature.html&amp;quot;&amp;gt;parse_dice_roll_string.feature&amp;lt;/a&amp;gt;
+
+&amp;lt;li class=&amp;quot;file&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;./features/physh_roller/roll_dice_feature.html&amp;quot;&amp;gt;roll_dice.feature&amp;lt;/a&amp;gt;
+
+&amp;lt;li class=&amp;quot;file&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;./features/physh_roller/roll_die_feature.html&amp;quot;&amp;gt;roll_die.feature&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;  &amp;lt;nav id=&amp;quot;classindex-section&amp;quot;
+class=&amp;quot;section project-section&amp;quot;&amp;gt; &amp;lt;h3
+class=&amp;quot;section-header&amp;quot;&amp;gt;Class and Module
+Index&amp;lt;/h3&amp;gt;</p>
+
+<p>&amp;lt;ul class=&amp;quot;link-list&amp;quot;&amp;gt;</p>
+
+<pre>&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./Object.html&amp;quot;&amp;gt;Object&amp;lt;/a&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./Output.html&amp;quot;&amp;gt;Output&amp;lt;/a&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./PhyshRoller.html&amp;quot;&amp;gt;PhyshRoller&amp;lt;/a&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./PhyshRoller/DiceRoll.html&amp;quot;&amp;gt;PhyshRoller::DiceRoll&amp;lt;/a&amp;gt;
+
+&amp;lt;li&amp;gt;&amp;lt;a href=&amp;quot;./PhyshRoller/Die.html&amp;quot;&amp;gt;PhyshRoller::Die&amp;lt;/a&amp;gt;</pre>
+
+<p>&amp;lt;/ul&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;/div&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/nav&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;div id=“documentation”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre class=“ruby”&gt;&lt;span
+class=“ruby-operator”&gt;&amp;lt;&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;h1&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;class&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;class&amp;quot;&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;gt;&lt;/span&gt;&lt;span
+class=“ruby-keyword”&gt;class&lt;/span&gt; &lt;span
+class=“ruby-constant”&gt;Object&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;lt;&lt;/span&gt;&lt;span
+class=“ruby-regexp”&gt;/h1&amp;gt;</p>
+
+<p>&amp;lt;div id=&amp;quot;description&amp;quot;
+class=&amp;quot;description&amp;quot;&amp;gt;</p>
+
+<p>&amp;lt;/&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;div&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;gt;&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;lt;&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;!&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;-&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;-&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;description&lt;/span&gt; &lt;span
+class=“ruby-operator”&gt;-&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;-&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;gt;&lt;/span&gt;</p>
+
+<p>&lt;span class=“ruby-operator”&gt;&amp;lt;&lt;/span&gt;&lt;span
+class=“ruby-identifier”&gt;section&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;id&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;5Buntitled-5D&amp;quot;&lt;/span&gt;
+&lt;span class=“ruby-identifier”&gt;class&lt;/span&gt;=&lt;span
+class=“ruby-string”&gt;&amp;quot;documentation-section&amp;quot;&lt;/span&gt;&lt;span
+class=“ruby-operator”&gt;&amp;gt;&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;Methods&lt;/span&gt; &lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt;
+
+ &lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;section&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;id&lt;/span&gt;=&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;public-instance-5Buntitled-5D-method-details&amp;quot;&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;method-section section&amp;quot;&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;h3&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;section-header&amp;quot;&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;ruby-constant&quot;&gt;Public&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;Instance&lt;/span&gt; &lt;span class=&quot;ruby-constant&quot;&gt;Methods&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-regexp&quot;&gt;/h3&amp;gt;
+
+  &amp;lt;div id=&amp;quot;method-i-output&amp;quot; class=&amp;quot;method-detail &amp;quot;&amp;gt;
+
+    &amp;lt;div class=&amp;quot;method-heading&amp;quot;&amp;gt;
+      &amp;lt;span class=&amp;quot;method-name&amp;quot;&amp;gt;output&amp;lt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;pan&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;span&lt;/span&gt;
+        &lt;span class=&quot;ruby-identifier&quot;&gt;class&lt;/span&gt;=&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;method-args&amp;quot;&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt;()&lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-regexp&quot;&gt;/span&amp;gt;
+
+      &amp;lt;span class=&amp;quot;method-click-advice&amp;quot;&amp;gt;click to toggle source&amp;lt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;pan&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-node&quot;&gt;/div&amp;gt;
+
+    &amp;lt;div class=&amp;quot;method-description&amp;quot;&amp;gt;
+
+      &amp;lt;div class=&amp;quot;method-source-code&amp;quot; id=&amp;quot;output-source&amp;quot;&amp;gt;
+        &amp;lt;pre&amp;gt;&amp;lt;span class=&amp;quot;ruby-comment&amp;quot;&amp;gt;# File features/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;tep_definitions&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;physh_roller&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;ruby-identifier&quot;&gt;physh_roller_steps&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;rb&lt;/span&gt;, &lt;span class=&quot;ruby-identifier&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;ruby-operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;ruby-regexp&quot;&gt;/span&amp;gt;</pre>
+
+<p>&lt;/span&gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;span class=“ruby-keyword”&amp;gt;def&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=“ruby-identifier”&amp;gt;output&amp;lt;/span&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;span
+class=&amp;quot;ruby-ivar&amp;quot;&amp;gt;@output&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-operator&amp;quot;&amp;gt;||=&amp;lt;/span&amp;gt;
+&amp;lt;span
+class=&amp;quot;ruby-constant&amp;quot;&amp;gt;Output&amp;lt;/span&amp;gt;.&amp;lt;span
+class=&amp;quot;ruby-identifier&amp;quot;&amp;gt;new&amp;lt;/span&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;span
+class=“ruby-keyword”&amp;gt;end&amp;lt;/span&amp;gt;&amp;lt;/pre&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;        &amp;lt;/div&amp;gt;&amp;lt;!– output-source –&amp;gt;</p>
+
+<pre>    &amp;lt;/div&amp;gt;
+
+  &amp;lt;/div&amp;gt;&amp;lt;!-- output-method --&amp;gt;
+
+&amp;lt;/section&amp;gt;&amp;lt;!-- public-instance-method-details --&amp;gt;</pre>
+
+<p>&amp;lt;/section&amp;gt;&amp;lt;!– 5Buntitled-5D –&amp;gt;&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/div&amp;gt;&amp;lt;!– documentation –&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;footer id=“validator-badges”&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;pre&gt;&amp;lt;p&amp;gt;&amp;lt;a <a
+href="http://Validate">href=“http://validator.w3.org/check/referer”&gt;</a>;
+&amp;lt;p&amp;gt;Generated by &amp;lt;a href=&amp;quot;<a
+href="https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt">github.com/rdoc/rdoc“&gt;RDoc&lt;/a&gt</a>;
+4.0.0. &amp;lt;p&amp;gt;Generated with the &amp;lt;a href=&amp;quot;<a
+href="http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish">deveiate.org/projects/Darkfish-Rdoc/”&gt;Darkfish</a>
+Rdoc Generator&amp;lt;/a&amp;gt; 3.&lt;/pre&gt;</p>
+
+<p>&lt;p&gt;&amp;lt;/footer&amp;gt;&lt;/p&gt;</p>
+
+<p>&lt;/div&gt;</p>
+
+<p>&lt;footer id=“validator-badges”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt; 4.0.0.
+&lt;p&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish Rdoc Generator&lt;/a&gt; 3.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
