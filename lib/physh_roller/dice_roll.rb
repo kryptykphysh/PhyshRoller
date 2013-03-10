@@ -1,9 +1,13 @@
 module PhyshRoller
 	class DiceRoll
+		# Splits a dice roll string in to the :number_of_dice,
+		# :sides_on_dice and :roll_modifier capture groups.
 		DICE_ROLL_REGEXP = /\A(\d+)?d(\d+)([\+-]\d*)?\z/i
 
-		attr_reader :dice_roll_string, :sides_on_dice, :roll_modifier,
-			:dice_array
+		# The original dice roll string, downcased and validated.
+		attr_reader :dice_roll_string
+
+		attr_reader :sides_on_dice, :roll_modifier, :dice_array
 		
 		def initialize(dice_roll_string, output=$stdout)
 			@output = output
@@ -30,6 +34,7 @@ module PhyshRoller
 
 		def roll_dice
 			@dice_array.each { |die| die.roll }
+			return self
 		end
 
 		def add_dice_to_dice_array(number_of_dice, sides_on_dice)
