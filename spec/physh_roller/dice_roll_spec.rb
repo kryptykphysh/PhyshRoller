@@ -15,6 +15,7 @@ module PhyshRoller
 				it { should respond_to(:roll_modifier) }
 				it { should respond_to(:dice_array) }
 				it { should respond_to(:results) }
+				it { should respond_to(:roll_dice) }
 			end
 
 			context "with an invalid dice_roll_string" do
@@ -134,7 +135,7 @@ module PhyshRoller
 			end
 
 			it "should output the dice rolls" do
-				@output.should_receive(:puts).with(/\ADice rolls: (\d,)+\d\z/)
+				@output.should_receive(:puts).with(/\ADice rolls: (\d, )+\d\z/)
 			end
 
 			it "should output the total" do

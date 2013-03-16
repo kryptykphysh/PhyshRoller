@@ -18,14 +18,21 @@ opt_parse = OptionParser.new do |opts|
 		puts opts
 		exit
 	end
+
+	# Fate diceroll switch
+	opts.on('-f', '--fate', 'Make a FATE dice roll.') do
+		options[:fate] = true
+	end
 end
 
 opt_parse.parse!
-
-
-dice_roll_string = ARGV.unshift[0]
-
-dice_roll = PhyshRoller::DiceRoll.new(dice_roll_string, $stdout)
+ 
+if options[:fate]
+	dice_roll = PhyshRoller::FateRoll.new
+else
+	dice_roll_string = ARGV.unshift[0]
+	dice_roll = PhyshRoller::DiceRoll.new(dice_roll_string, $stdout)
+end
 dice_roll.roll_dice
 dice_roll.output_results
 

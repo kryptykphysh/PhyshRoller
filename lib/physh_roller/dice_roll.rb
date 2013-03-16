@@ -60,7 +60,7 @@ module PhyshRoller
 		def output_results
 			results = self.results
 			@output.puts "You rolled: #{results[:dice_roll]}"
-			@output.puts "Dice rolls: #{results[:dice_rolls].join(',')}"
+			@output.puts "Dice rolls: #{results[:dice_rolls].join(', ')}"
 			@output.puts "Total: #{results[:sum]}"
 		end
 

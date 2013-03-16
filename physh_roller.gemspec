@@ -1,11 +1,15 @@
 Gem::Specification.new do |s|
   s.name         = "physh_roller"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.author       = "Kryptyk Fysh"
   s.email        = "kryptykfysh@kryptykfysh.co.uk"
   s.homepage     = "https://github.com/kryptykfysh/PhyshRoller"
   s.summary      = "A dice rolling application"
-  s.description  = File.read(File.join(File.dirname(__FILE__), 'README'))
+  s.description  = <<-EOF
+    A Ruby code dice rolling application that cna be used both as a
+    standalone commandline application, and also mixed in to other 
+    applications as a module.
+  EOF
   s.license      = 'MIT'
 
   s.files         = Dir["{bin,lib}/**/*"] + %w(LICENSE README)
