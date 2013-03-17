@@ -7,14 +7,14 @@ module PhyshRoller
     def results
       results_hash = {
         :dice_roll      => 'FATE Roll',
-        :dice_rolls     => convert_dice_to_fate(@dice_array),
-        :sum            => get_fate_total(@dice_array),
+        :dice_rolls     => convert_dice_to_fate,
+        :sum            => get_fate_total,
         :roll_modifier  => 0
       }
     end
 
-    def convert_dice_to_fate(dice_array)
-      dice_rolls = dice_array.map { |die| die.last_result - 2 }.sort.reverse
+    def convert_dice_to_fate
+      dice_rolls = @dice_array.map { |die| die.last_result - 2 }.sort.reverse
       converted_dice = dice_rolls.map do |roll|
         case roll
         when -1
@@ -28,7 +28,7 @@ module PhyshRoller
       return converted_dice
     end
 
-    def get_fate_total(dice_array)
+    def get_fate_total
       sum = @dice_array.map { |die| die.last_result - 2 }.reduce(:+)
       sum >= 0 ? '+' + sum.to_s : sum.to_s
     end

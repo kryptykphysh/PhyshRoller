@@ -27,8 +27,26 @@ module PhyshRoller
       its([:sum])           { should match /\A[\+-][01234]\z/ }
     end
 
-    describe "#convert_dice_to_fate"
+    describe "#convert_dice_to_fate" do
+      before { @fate_roll = FateRoll.new.roll_dice }
 
-    describe "#get_fate_total"
+      it "should have 4 dice in the array" do
+        @fate_roll.convert_dice_to_fate.size.should == 4
+      end
+ 
+      it "should have elements with value '+', 'Nil', or '-'" do
+        @fate_roll.convert_dice_to_fate.each { |n|
+          ['+', 'Nil', '-'].include?(n).should be_true
+        }
+      end
+    end
+
+    describe "#get_fate_total" do
+      before { @fate_roll = FateRoll.new.roll_dice }
+
+      subject { @fate_roll.get_fate_total }
+
+      it { should match /\A[\+-][01234]\z/ }
+    end
   end
 end
