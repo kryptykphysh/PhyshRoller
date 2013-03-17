@@ -12,6 +12,14 @@ If you've installed the gem, you can simply run:
 
 Example dice strings are 4d6, 20d100-20, 14D2+6. Basically, anything that matches the regular expression /\A(\d+)?d(\d+)([\+-]\d*)?\z/i.
 
+Command line help is available with
+
+  dice --help
+
+Now supports FATE dice rolls with:
+
+  dice -f
+
 As A Module
 -----------
 
