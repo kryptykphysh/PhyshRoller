@@ -8,17 +8,23 @@ Command Line
 
 If you've installed the gem, you can simply run:
 
-  dice <the_dice_string_i_want_to_roll>
+```
+dice <the_dice_string_i_want_to_roll>
+```
 
 Example dice strings are 4d6, 20d100-20, 14D2+6. Basically, anything that matches the regular expression /\A(\d+)?d(\d+)([\+-]\d*)?\z/i.
 
 Command line help is available with
 
-  dice --help
+```
+dice --help
+```
 
 Now supports FATE dice rolls with:
 
-  dice -f
+```
+dice -f
+```
 
 As A Module
 -----------
@@ -27,19 +33,15 @@ You can require physh_roller in a Ruby application and then create dicerolls.
 
 For example:
 
-  dice_roll = PhyshRoller::DiceRoll.new('2d10+30')
-
-  dice_roll.roll_dice
-
-  first_roll = dice_roll.results
-
-  dice_roll.roll_dice
-
-  second_roll = dice_roll.results
-
-  first_total = first_roll[:sum]
-
-  second_total = second_roll[:sum]
+```ruby
+dice_roll = PhyshRoller::DiceRoll.new('2d10+30')
+dice_roll.roll_dice
+first_roll = dice_roll.results
+dice_roll.roll_dice
+second_roll = dice_roll.results
+first_total = first_roll[:sum]
+second_total = second_roll[:sum]
+```
 
 Documentation
 =============
