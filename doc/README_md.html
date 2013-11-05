@@ -48,10 +48,12 @@
   <nav class="section">
     <h3 class="section-header">Table of Contents</h3>
     <ul>
-      <li><a href="#label-"></a>
-      <li><a href="#label-"></a>
-      <li><a href="#label-"></a>
-      <li><a href="#label-"></a>
+      <li><a href="#label-Usage">Usage</a>
+      <li><a href="#label-Command+Line">Command Line</a>
+      <li><a href="#label-As+A+Module">As A Module</a>
+      <li><a href="#label-Documentation">Documentation</a>
+      <li><a href="#label-Why+Have+You+Done+This+Thing%3F">Why Have You Done This Thing?</a>
+      <li><a href="#label-Where+Does+It+Go+From+Here">Where Does It Go From Here</a>
     </ul>
   </nav>
 </div>
@@ -65,7 +67,7 @@
   
     <li class="file"><a href="./LICENSE.html">LICENSE</a>
   
-    <li class="file"><a href="./README.html">README</a>
+    <li class="file"><a href="./README_md.html">README</a>
   
     <li class="file"><a href="./doc/created_rid.html">created.rid</a>
   
@@ -107,12 +109,9 @@
   
 <p>A simple dice rolling application.</p>
 
-<p>Usage</p>
+<h1 id="label-Usage">Usage<span><a href="#label-Usage">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
-<h5 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h5>
-
-<p>Command Line</p>
-<hr style="height: 10px">
+<h2 id="label-Command+Line">Command Line<span><a href="#label-Command+Line">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
 <p>If you&#39;ve installed the gem, you can simply run:</p>
 
@@ -130,37 +129,27 @@ href=“http://+-”>A(d+)?d(d+)(</a>d*)?z/i.</p>
 
 <pre>dice -f</pre>
 
-<p>As A Module</p>
-<hr style="height: 9px">
+<h2 id="label-As+A+Module">As A Module<span><a href="#label-As+A+Module">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
 <p>You can require physh_roller in a Ruby application and then create
 dicerolls.</p>
 
 <p>For example:</p>
 
-<pre>dice_roll = PhyshRoller::DiceRoll.new(&#39;2d10+30&#39;)
+<pre class="ruby"><span class="ruby-identifier">dice_roll</span> = <span class="ruby-constant">PhyshRoller</span><span class="ruby-operator">::</span><span class="ruby-constant">DiceRoll</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;2d10+30&#39;</span>)
+<span class="ruby-identifier">dice_roll</span>.<span class="ruby-identifier">roll_dice</span>
+<span class="ruby-identifier">first_roll</span> = <span class="ruby-identifier">dice_roll</span>.<span class="ruby-identifier">results</span>
+<span class="ruby-identifier">dice_roll</span>.<span class="ruby-identifier">roll_dice</span>
+<span class="ruby-identifier">second_roll</span> = <span class="ruby-identifier">dice_roll</span>.<span class="ruby-identifier">results</span>
+<span class="ruby-identifier">first_total</span> = <span class="ruby-identifier">first_roll</span>[:<span class="ruby-identifier">sum</span>]
+<span class="ruby-identifier">second_total</span> = <span class="ruby-identifier">second_roll</span>[:<span class="ruby-identifier">sum</span>]
+</pre>
 
-dice_roll.roll_dice
-
-first_roll = dice_roll.results
-
-dice_roll.roll_dice
-
-second_roll = dice_roll.results
-
-first_total = first_roll[:sum]
-
-second_total = second_roll[:sum]</pre>
-
-<p>Documentation</p>
-
-<h6 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+<h1 id="label-Documentation">Documentation<span><a href="#label-Documentation">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
 <p>More documentation is available in RDoc format in the /doc folder.</p>
 
-<p>Why Have You Done This Thing?</p>
-
-<h6 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+<h1 id="label-Why+Have+You+Done+This+Thing%3F">Why Have You Done This Thing?<span><a href="#label-Why+Have+You+Done+This+Thing%3F">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
 <p>I play RPGs a lot. A lot of the tools I build relate to these games and
 most of them use dice rolls. I got fed up having to do stuff on the fly and
@@ -174,9 +163,7 @@ code. This time I&#39;m (hopefully) doing it right.</p>
 suite and let me know where it can be improved. That goes for the rest of
 the code too. :)</p>
 
-<p>Where Does It Go From Here</p>
-
-<h6 id="label-"><span><a href="#label-">&para;</a> <a href="#documentation">&uarr;</a></span></h6>
+<h1 id="label-Where+Does+It+Go+From+Here">Where Does It Go From Here<span><a href="#label-Where+Does+It+Go+From+Here">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
 <p>I fully intend to add functionality for exploding dice (reroll on maximum,
 or a threshold), successes on individual dice (as per Shadowrun or nWoD).</p>

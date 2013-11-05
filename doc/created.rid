@@ -1,21 +1,22 @@
-Sun, 17 Mar 2013 18:05:07 +1100
-./physh_roller.gemspec	Sun, 17 Mar 2013 17:58:52 +1100
-./bin/dice	Tue, 12 Mar 2013 05:36:39 +1100
-./doc/created.rid	Sun, 17 Mar 2013 18:05:07 +1100
-./lib/physh_roller/die.rb	Mon, 11 Mar 2013 00:04:27 +1100
-./lib/physh_roller/dice_roll.rb	Tue, 12 Mar 2013 06:29:29 +1100
-./lib/physh_roller/fate_roll.rb	Sun, 17 Mar 2013 17:55:11 +1100
-./lib/physh_roller.rb	Tue, 12 Mar 2013 05:37:42 +1100
+Tue, 05 Nov 2013 18:30:25 +1100
+./physh_roller.gemspec	Mon, 18 Mar 2013 16:27:36 +1100
+./bin/dice	Tue, 05 Nov 2013 18:24:41 +1100
+./doc/created.rid	Tue, 05 Nov 2013 18:30:25 +1100
+./lib/physh_roller/die.rb	Tue, 05 Nov 2013 18:25:47 +1100
+./lib/physh_roller/dice_roll.rb	Tue, 05 Nov 2013 18:25:47 +1100
+./lib/physh_roller/fate_roll.rb	Tue, 05 Nov 2013 18:25:47 +1100
+./lib/physh_roller.rb	Tue, 05 Nov 2013 18:25:47 +1100
 ./LICENSE	Mon, 11 Mar 2013 00:04:27 +1100
-./physh_roller-1.0.0.gem	Mon, 11 Mar 2013 03:34:33 +1100
+./physh_roller-1.0.0.gem	Sun, 17 Mar 2013 18:10:13 +1100
+./README.md	Mon, 18 Mar 2013 16:23:06 +1100
 ./features/step_definitions/physh_roller/physh_roller_steps.rb	Mon, 11 Mar 2013 00:04:27 +1100
 ./features/physh_roller/parse_dice_roll_string.feature	Mon, 11 Mar 2013 00:04:27 +1100
 ./features/physh_roller/roll_die.feature	Mon, 11 Mar 2013 00:04:27 +1100
 ./features/physh_roller/roll_dice.feature	Mon, 11 Mar 2013 00:04:27 +1100
 ./features/support/env.rb	Mon, 11 Mar 2013 00:04:27 +1100
-./physh_roller-1.0.1.gem	Mon, 11 Mar 2013 03:39:39 +1100
-./spec/physh_roller/die_spec.rb	Mon, 11 Mar 2013 00:04:27 +1100
-./spec/physh_roller/fate_roll_spec.rb	Sun, 17 Mar 2013 17:54:36 +1100
-./spec/physh_roller/dice_roll_spec.rb	Tue, 12 Mar 2013 06:36:29 +1100
-./spec/spec_helper.rb	Mon, 11 Mar 2013 00:04:27 +1100
-./README	Sun, 17 Mar 2013 17:58:01 +1100
+./physh_roller-1.0.1.gem	Sun, 17 Mar 2013 18:10:13 +1100
+./physh_roller-1.1.1.gem	Sun, 17 Mar 2013 18:16:23 +1100
+./spec/physh_roller/die_spec.rb	Tue, 05 Nov 2013 18:27:17 +1100
+./spec/physh_roller/fate_roll_spec.rb	Tue, 05 Nov 2013 18:27:17 +1100
+./spec/physh_roller/dice_roll_spec.rb	Tue, 05 Nov 2013 18:27:17 +1100
+./spec/spec_helper.rb	Tue, 05 Nov 2013 18:27:17 +1100

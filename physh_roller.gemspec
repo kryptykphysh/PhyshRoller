@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.homepage     = "https://github.com/kryptykfysh/PhyshRoller"
   s.summary      = "A dice rolling application"
   s.description  = <<-EOF
-    A Ruby code dice rolling application that cna be used both as a
+    A Ruby code dice rolling application that can be used both as a
     standalone commandline application, and also mixed in to other 
     applications as a module.
   EOF
